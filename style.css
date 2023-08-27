@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&family=Permanent+Marker&family=Roboto+Condensed:ital,wght@1,700&family=Titillium+Web&display=swap');
+:root {
+    --blue: #0d2d4f;
+    --white: #ffffff;
+  }
+
+body {
+    margin: 0;
+    font-family: 'Titillium Web' ,sans-serif;
+}
+
+.small {
+    display: none;
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner #logo {
+    width: 25vw;
+}
+
+#banner #slogan {
+    color: white;
+    width: 25vw;
+    font-size: 25px;
+    font-family: 'Permanent Marker', sans-serif;
+    
+}
+
+#banner #background {
+    width: 100%;
+    /* #position: absolute;
+    top: 0; */
+    z-index: -1;
+    filter: brightness(.5);
+    max-height: 100vh;
+    position: absolute;
+    object-fit: cover;
+}
+
+#banner #flex_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner #box1 {
+    width: 30vw;
+    padding: 10vw 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    text-align: center;
+}
+
+#banner #box2 {
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner #box2 a {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: var(--blue);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 100px;
+    transition: .3s;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#banner #box2 a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: .3s;
+}
+
+#content {
+    background-color: white;
+    padding: 0 15vw;
+}
+
+#content p {
+    font-size: 20px;
+    margin: 15px 5vw;
+}
+
+#content h2 {
+    margin: 0;
+    padding: 30px 0 15px 0;
+    font-size: 35px;
+    color: var(--blue);
+    font-family: 'Barlow', sans-serif;
+}
+
+#content a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#content a:hover {
+    color: blue;
+}
+
+#content #support_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#content #support_info #p {
+    width: 25vw;
+    margin: 0;
+}
+
+#content #support_info #shop_box {
+    width: 25vw;
+    text-align: center;
+    flex-direction: column;
+    background-color: #C4A484;
+    border-radius: 20px;
+    margin: 0 2vw;
+    transition: .5s;
+}
+
+#content #support_info #shop_box img {
+    width: 25vw;
+    border-radius: 20px 20px 0 0;
+}
+
+#content #support_info #shop_box p {
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+
+#content #support_info a {
+    transition: .5s;
+}
+
+#content #support_info #shop_box a:hover {
+    color: white;
+    transition: .5s;    
+}
+#content #support_info #shop_box:hover {
+    background-color: var(--blue);
+    transition: .5s;
+}
+
+
+#footer {
+    background-color: var(--blue);
+    margin: 30px 0 0 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer a {
+    color: white;
+    margin: 10px;
+}
+
+#footer #link {
+    padding: 5px;
+}
+
+#footer #fine_text {
+    font-size: 12px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    .norm {
+        display: none;
+    }
+
+    .small {
+        display: block;
+    }
+    
+    #banner #flex_container{
+        flex-direction: column;
+    }
+
+    #banner #logo {
+        width: 250px;
+    }
+
+    #banner #slogan{
+        width: 60vw;
+        margin: 25px 0;
+    }
+
+    #banner #box1{
+        width: 70vw;
+        flex-direction: column;
+        padding: 40px 0 0;
+
+    }
+    #banner #box2{
+        flex-direction: row;
+        font-size: 15px;
+    }
+
+    #banner #box2 a {
+        margin: 0 10px 20px;
+        padding: 5px;
+    }
+
+    #content h2 {
+        font-size: 30px;
+    }
+
+    #content #support_info #p {
+        width: 50vw;
+        margin-bottom: 10px;
+    }
+
+    #content #support_info #shop_box {
+        width: 300px;
+    }
+
+    #content #support_info #shop_box img {
+        width: 300px;
+    }
+
+    @media screen and (max-width: 480px) {
+        #banner #logo {
+            width: 200px;
+        }
+
+        #banner #slogan {
+            font-size: 20px;
+        }
+
+        #banner #box1 {
+            padding: 30px 0 0;
+        }
+
+        #banner #box2 a {
+            margin: 0 5px 20px;
+        }
+
+        #content {
+            padding: 0 7vw;
+        }
+
+        #content h2 {
+            font-size: 25px;
+        }
+
+        #content p {
+            font-size: 18px;
+        }
+
+        #content #support_info #p {
+            width: 70vw;
+            margin-bottom: 10px;
+        }
+    
+        #content #support_info #shop_box {
+            width: 70vw;
+        }
+    
+        #content #support_info #shop_box img {
+            width: 70vw;
+        }
+
+        #content #support_info #shop_box p{
+            margin: 0;
+        }
+
+      }
+  }
