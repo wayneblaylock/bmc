@@ -83,6 +83,9 @@ body {
     margin: 0;
 }
 
+#title_banner #small {
+    display: none;
+}
 
 #content {
     background-color: white;
@@ -210,3 +213,16 @@ body {
     font-size: 12px;
     padding: 5px;
 }
+
+
+@media screen and (max-width: 1000px) {
+    
+    #title_banner #small {
+        display: block;
+    }
+
+    #title_banner #large {
+        display: none;
+    }
+    
+  }
