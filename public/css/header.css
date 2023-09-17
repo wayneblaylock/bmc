@@ -1,0 +1,145 @@
+  @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&family=Permanent+Marker&family=Roboto+Condensed:ital,wght@1,700&family=Titillium+Web&display=swap');
+:root {
+    --blue: #0d2d4f;
+    --white: #ffffff;
+  }
+
+body {
+    margin: 0;
+    font-family: 'Titillium Web' ,sans-serif;
+}
+
+.small {
+    display: none;
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+#banner #logo {
+    width: 25vw;
+}
+
+#banner #slogan {
+    color: white;
+    width: 25vw;
+    font-size: 25px;
+    font-family: 'Permanent Marker', sans-serif;
+    
+}
+
+#banner #background {
+    width: 100%;
+    /* #position: absolute;
+    top: 0; */
+    z-index: -1;
+    filter: brightness(.5);
+    max-height: 60vh;
+    position: absolute;
+    object-fit: cover;
+}
+
+#banner #flex_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner #box1 {
+    width: 30vw;
+    padding: 3vw 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    text-align: center;
+}
+
+#banner #box2 {
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner #box2 a {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: var(--blue);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 100px;
+    transition: .3s;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#banner #box2 a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: .3s;
+}
+
+@media screen and (max-width: 1000px) {
+  .norm {
+      display: none;
+  }
+
+  .small {
+      display: block;
+  }
+  
+  #banner #flex_container{
+      flex-direction: column;
+  }
+
+  #banner #logo {
+      width: 250px;
+  }
+
+  #banner #slogan{
+      width: 60vw;
+      margin: 25px 0;
+  }
+
+  #banner #box1{
+      width: 70vw;
+      flex-direction: column;
+      padding: 40px 0 0;
+
+  }
+  #banner #box2{
+      flex-direction: row;
+      font-size: 15px;
+  }
+
+  #banner #box2 a {
+      margin: 0 10px 20px;
+      padding: 5px;
+  }
+
+  @media screen and (max-width: 480px) {
+      #banner #logo {
+          width: 200px;
+      }
+
+      #banner #slogan {
+          font-size: 20px;
+      }
+
+      #banner #box1 {
+          padding: 30px 0 0;
+      }
+
+      #banner #box2 a {
+          margin: 0 5px 20px;
+      }
+
+    }
+}

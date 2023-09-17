@@ -1,0 +1,44 @@
+/* body{
+
+} */
+
+.postContainer{
+    background-color: #E8CAAC;
+    margin: 5vw 10vw;
+    display: flex;
+    height: 40vh;
+}
+
+
+.postImage {
+    height: 100%;
+    width: 35%;
+    margin: 0px;
+    /* flex-grow: 1; */
+}
+
+.postDescriptor{
+    margin: 10px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+}
+
+.date {
+    margin: 0;
+}
+
+.title a {
+    font-family: 'Barlow', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+hr {
+    border: 10px solid #0D2D4F;
+    border-radius: 2px;
+    margin: 1% 5%;
+}
