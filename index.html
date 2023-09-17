@@ -2,15 +2,22 @@
 layout: layout.html
 ---
 
-{% for post in collections.post %}
-<div class="postContainer">
-    <div class="postDescriptor">
-        <h1 class="title"><a href="{{ post.url }}">{{ post.data.title }}</a></h1>
-        <h3 class="date"> {{ post.data.kid }}</h3>
-        <hr>
-        <p>{{ post.content }}</p>    
-    </div>   
-    <img src="/public/img/mountains2.jpg" class="postImage" alt="Background image showing a mountainous landscape."> 
-</div>
+<h1>All Articles</h1>
 
-{% endfor %}
+<div id="flexbox">
+    <div id="links_box">
+        {% for post in collections.post %}
+        <div class="post_container">
+            <a href="{{ post.url }}">
+                <div class="post_descriptor">
+                    <h2 class="title">{{ post.data.title }}</h2>
+                    <h2 class="subtitle">{{post.data.subtitle}}</h2>
+                    <h3 class="date">{{post.data.kid }}</h3>
+                    {{ post.content }}
+                </a>
+            </div>   
+            <img src="/public/img/0M.png" class="post_image" alt="Background image showing a mountainous landscape."> 
+        </div>
+        {% endfor %}
+    </div>
+</div>
