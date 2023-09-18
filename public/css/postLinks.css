@@ -33,7 +33,7 @@ h1 {
     box-shadow: rgba(0, 0, 0, 0.462) 10px 10px 20px;
 }
 
-.post_container a{
+#links_box a{
     text-decoration: none;
     color: black;
 }
@@ -43,12 +43,12 @@ h1 {
     height: 200px;
     width: auto;
     margin: 0px;
-    /* flex-grow: 1; */
 }
 
 .post_descriptor{
     margin: 10px;
     text-align: center;
+    width: 483px;
 }
 
 .post_descriptor .title {

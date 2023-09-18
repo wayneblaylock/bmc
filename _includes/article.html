@@ -25,12 +25,13 @@
             <h1 class="title">{{ title }}</h1>
             <h1 class="subtitle">Manifesting Strength in Constructive Ways</h1>
         </div>
-        <img src="/public/img/Articles/1.png" class="background_img" id="large">
-        <img src="/public/img/Articles/1.png" class="background_img" id="small">
+        <img src="{{imgL}}" class="background_img" alt="{{imgAlt}}" id="large">
+        <img src="{{imgM}}" class="background_img" alt="{{imgAlt}}" id="medium">
         <style>#title_banner .background_img{filter: brightness(.4);} #title_banner #titles{color: rgb(255, 255, 255);}</style>
     </div>
     <main>
         <div id="content">
+            <p>{{kid}}</p>
             <p id="thesis"> {{ thesis }}</p>
             {{ content }}
             <ul>
@@ -38,7 +39,7 @@
                 <li> {{ source }}</li>
                 {% endfor %}
             </ul>
-            <a href="" id="back_button" ><-- Back to All Articles</a>
+            <a href="/index.html" id="back_button" ><-- Back to All Articles</a>
         </div>
     
     </main>
