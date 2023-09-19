@@ -20,6 +20,11 @@ body {
     height: 60vh;
 }
 
+#banner #flex_container {
+    text-align: center;
+
+}
+
 #banner #logo {
     width: 25vw;
 }
@@ -33,9 +38,7 @@ body {
 }
 
 #banner #background {
-    width: 100%;
-    /* #position: absolute;
-    top: 0; */
+    min-width: 100%;
     z-index: -1;
     filter: brightness(.5);
     max-height: 60vh;
@@ -74,11 +77,12 @@ body {
     color: var(--blue);
     text-decoration: none;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 25px;
     margin: 10px 0;
     width: 100px;
     transition: .3s;
     border: 1px solid rgba(255, 255, 255, 0.5);
+    font-weight: bold;
 }
 
 #banner #box2 a:hover {
