@@ -1,0 +1,12 @@
+#formContainer {
+    height: 40vh;
+    width: 25vw;
+    background-color: #0D2D4F;
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+}
+form {
+    text-align: center;
+    margin: auto;
+}
