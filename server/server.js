@@ -11,7 +11,7 @@ app.post('/submit', (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
 
-    // Process the form data here (e.g., save to a database)
+    // Process the form data save to csv
     console.log("submited")
     let user = name + ',' + email + '\n'
 
@@ -20,7 +20,7 @@ app.post('/submit', (req, res) => {
     console.log('Saved!');
     });
 
-  // Redirect or render a response
+  // Redirect
   res.redirect('http://localhost:8080/');
 });
 
