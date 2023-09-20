@@ -191,30 +191,6 @@ body {
 }
 
 
-#footer {
-    background-color: var(--blue);
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-#footer a {
-    color: white;
-    margin: 10px;
-}
-
-#footer #link {
-    padding: 5px;
-}
-
-#footer #fine_text {
-    font-size: 12px;
-    padding: 5px;
-}
-
-
 @media screen and (max-width: 1000px) {
     
     #title_banner #medium {
