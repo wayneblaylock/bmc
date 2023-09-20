@@ -2,8 +2,10 @@
 layout: layout.html
 ---
 <style>#blog_bttn{display: none;}</style>
+<link rel="stylesheet" href="/public/css/style.css">
 <h1>All Articles</h1>
 
+<div class="inline">
 <div id="flexbox">
     <div id="links_box">
         {% for post in collections.post %}
@@ -18,4 +20,9 @@ layout: layout.html
         </a>
         {% endfor %}
     </div>
+</div>
+</div>
+
+<div class="inline">
+    {% include "email-sign-up.html" %}
 </div>
