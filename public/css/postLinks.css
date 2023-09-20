@@ -23,6 +23,7 @@ h1 {
     height: 200px;
     overflow: hidden;
     border-radius: 25px 0 0 25px;
+    transition: .5s;
 }
 
 .post_container:nth-child(2){
