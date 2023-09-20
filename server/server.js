@@ -12,7 +12,7 @@ app.post('/submit', (req, res) => {
 
     // Process the form data save to csv
     console.log("submited")
-    let user = name + ',' + email + '\n'
+    let user = email + '\n'
 
     fs.appendFile('emails.csv', user, function (err) {
     if (err) throw err;
