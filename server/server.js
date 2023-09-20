@@ -8,7 +8,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Handle form submission
 app.post('/submit', (req, res) => {
-    const name = req.body.name;
     const email = req.body.email;
 
     // Process the form data save to csv
