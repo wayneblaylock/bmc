@@ -90,7 +90,6 @@ body {
 #content {
     background-color: white;
     padding: 0 20vw;
-    min-height: 70vh;
 }
 
 #content #thesis {
@@ -156,6 +155,50 @@ body {
 #support_info h2{
 font-family: "Barlow", sans-serif;
 font-size: 30px;
+margin-bottom: 15px;
+}
+
+#support_info p{
+    font-size: 20px;
+}
+
+#support_info .inline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: 0 30px;
+}
+
+#support_info form{
+    text-align: center;
+}
+
+#support_info input{
+    width: 350px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
+    border: none;
+}
+
+#support_info button{
+    border: none;
+    font-family: 'Titillium Web' ,sans-serif;
+    background-color: var(--lightblue);
+    color: white;
+    padding: 8px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    margin-top: 10px;
+    transition: .8s;
+}
+
+#support_info button:hover{
+    background-color: white;
+    color: var(--blue);
 }
 
 #support_info #p {
@@ -164,13 +207,35 @@ font-size: 30px;
 }
 
 #support_info #shop_box {
+    width: 400px;
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 #support_info #shop_box img {
-    width: 25vw;
+    width: 350px;
+    border-radius: 25px 0 25px 0;
 }
 
+#support_info #shop_box a {
+    background-color: var(--lightblue);
+    color: white;
+    border: none;
+    text-decoration: none;
+    margin: 0 0 0 20px;
+    padding: 8px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: .8s;
+}
 
+#support_info #shop_box a:hover {
+    background-color: white;
+    color: var(--blue);
+}
 
 
 @media screen and (max-width: 1000px) {
