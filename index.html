@@ -5,23 +5,25 @@ layout: layout.html
 <h1>All Articles</h1>
 
 <div class="inline">
-<div id="flexbox">
-    <div id="links_box">
-        {% for post in collections.post %}
-        <a href="{{ post.url }}" class="post_container">
-                <div class="post_descriptor">
-                    <h2 class="title">{{ post.data.title }}</h2>
-                    <h2 class="subtitle">{{post.data.subtitle}}</h2>
-                    <h3 class="date">{{post.data.kid }}</h3>
-                    <p>{{ post.data.thesis }}</p>
-                </div>   
-                <img src="{{ post.data.imgM }}" class="post_image" alt="{{post.data.imgAlt}}"> 
-        </a>
-        {% endfor %}
+    <div id="flexbox">
+        <div id="links_box">
+            {% for post in collections.post %}
+            <a href="{{ post.url }}" class="post_container">
+                    <div class="post_descriptor">
+                        <h2 class="title">{{ post.data.title }}</h2>
+                        <h2 class="subtitle">{{post.data.subtitle}}</h2>
+                        <h3 class="date">{{post.data.kid }}</h3>
+                        <p>{{ post.data.thesis }}</p>
+                    </div>   
+                    <img src="{{ post.data.imgM }}" class="post_image" alt="{{post.data.imgAlt}}"> 
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="emailbox">
+        <h2>Join the BMC Newsletter</h2>
+        <p>Here about new articles!</p>
+        {% include "email-sign-up.html" %}
     </div>
 </div>
-</div>
 
-<div class="inline">
-    {% include "email-sign-up.html" %}
-</div>

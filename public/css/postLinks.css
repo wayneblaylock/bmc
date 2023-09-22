@@ -15,9 +15,16 @@ h1 {
     font-size: 50px;
 }
 
+.inline{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .post_container{
     background-color: var(--lightbrown);
-    margin: 30px 10vw;
+    margin: 30px 25px;
     display: flex;
     max-width: 750px;
     height: 200px;
@@ -73,4 +80,58 @@ h1 {
     margin: 10px 30px;
     text-align: left;
     border-top: solid var(--blue) 3px;
+}
+
+.emailbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 350px;
+    margin: 10px 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--grey);
+}
+
+.emailbox h2 {
+    color: white;
+    margin-bottom: 0;
+
+}
+
+.emailbox p {
+    color: white;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.emailbox form{
+    text-align: center;
+}
+
+.emailbox input{
+    width: 250px;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+}
+
+.emailbox button{
+    border: none;
+    font-family: 'Titillium Web' ,sans-serif;
+    background-color: var(--lightblue);
+    color: white;
+    padding: 8px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-top: 10px;
+    transition: .8s;
+}
+
+.emailbox button:hover{
+    background-color: white;
+    color: var(--blue);
 }
