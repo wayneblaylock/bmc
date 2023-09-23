@@ -162,59 +162,6 @@ h1 {
 
 @media screen and (max-width: 830px) {
 
-    /* #links_box{
-        width: 100vw;
-    }
-
-    a.post_container{
-        width: 90vw;
-        border-radius: 20px;
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
-        position: relative;
-    }
-
-
-    a.post_container img{
-        max-width: 40vw;
-        height: 30vw;
-        position: absolute;
-        right: 0;
-    }
-
-    .head_descriptor{
-        height: 30vw;
-        width: 50vw;
-        margin: 0;
-        padding: 5px 20px;
-        box-sizing: border-box;
-    }
-
-    .head_descriptor .title{
-        font-size: 3.8vw;
-    }
-
-    .head_descriptor .subtitle{
-        font-size: 3.5vw;
-    }
-
-    .head_descriptor .date{
-        font-size: 2.2vw;
-        text-align: left;
-        margin: 0;
-    }
-
-    .post_descriptor{
-        margin: 0;
-        width: 90vw;
-    }
-
-    .post_descriptor p{
-        display: none;
-    } */
-
     h1{
         font-size: 45px;
     }
