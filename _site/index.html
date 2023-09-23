@@ -37,36 +37,12 @@
     <div id="content_flexbox">
         <div id="links_box">
             
-            <a href="/posts/post-1/" class="post_container">
-                    <div class="post_descriptor">
-                        <div class="head_descriptor">
-                        <h2 class="title">Benefiting from Masculinity</h2>
-                        <h2 class="subtitle">Manifesting Strength in Constructive ways</h2>
-                        <h3 class="date">September 17, 2023</h3>
-                        </div>
-                        <p>It seems like masculinity can be a somewhat controversial topic. Is it detrimental, or should it be encouraged? Much of the contention surrounding this topic comes from simple misunderstandings.</p>
-                    </div>   
-                    <img src="/public/img/Articles/1M.png" class="post_image" alt="Image of a skyscraper under construction."> 
-            </a>
-            
             <a href="/posts/post-2/" class="post_container">
                     <div class="post_descriptor">
                         <div class="head_descriptor">
                         <h2 class="title">My Second post</h2>
                         <h2 class="subtitle">With a super cool subtitle</h2>
                         <h3 class="date">9-12-2023</h3>
-                        </div>
-                        <p>It seems like masculinity can be a somewhat controversial topic. Is it detrimental, or should it be encouraged? Much of the contention surrounding this topic comes from simple misunderstandings.</p>
-                    </div>   
-                    <img src="/public/img/Articles/1M.png" class="post_image" alt="Image of a skyscraper under construction."> 
-            </a>
-            
-            <a href="/posts/filler/" class="post_container">
-                    <div class="post_descriptor">
-                        <div class="head_descriptor">
-                        <h2 class="title">Benefiting from Masculinity</h2>
-                        <h2 class="subtitle">Manifesting Strength in Constructive ways</h2>
-                        <h3 class="date">September 17, 2023</h3>
                         </div>
                         <p>It seems like masculinity can be a somewhat controversial topic. Is it detrimental, or should it be encouraged? Much of the contention surrounding this topic comes from simple misunderstandings.</p>
                     </div>   
@@ -85,6 +61,30 @@
                     <img src="/public/img/Articles/1M.png" class="post_image" alt="Image of a skyscraper under construction."> 
             </a>
             
+            <a href="/posts/filler/" class="post_container">
+                    <div class="post_descriptor">
+                        <div class="head_descriptor">
+                        <h2 class="title">Benefiting from Masculinity</h2>
+                        <h2 class="subtitle">Manifesting Strength in Constructive ways</h2>
+                        <h3 class="date">September 17, 2023</h3>
+                        </div>
+                        <p>It seems like masculinity can be a somewhat controversial topic. Is it detrimental, or should it be encouraged? Much of the contention surrounding this topic comes from simple misunderstandings.</p>
+                    </div>   
+                    <img src="/public/img/Articles/1M.png" class="post_image" alt="Image of a skyscraper under construction."> 
+            </a>
+            
+            <a href="/posts/post-1/" class="post_container">
+                    <div class="post_descriptor">
+                        <div class="head_descriptor">
+                        <h2 class="title">Benefiting from Masculinity</h2>
+                        <h2 class="subtitle">Manifesting Strength in Constructive ways</h2>
+                        <h3 class="date">September 17, 2023</h3>
+                        </div>
+                        <p>It seems like masculinity can be a somewhat controversial topic. Is it detrimental, or should it be encouraged? Much of the contention surrounding this topic comes from simple misunderstandings.</p>
+                    </div>   
+                    <img src="/public/img/Articles/1M.png" class="post_image" alt="Image of a skyscraper under construction."> 
+            </a>
+            
         </div>
     </div>
     <div class="emailbox">
@@ -92,7 +92,9 @@
         <p>New Articles, Straight to Your Inbox</p>
         <div id="formContainer">
     <form id="email_form">
+        <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="youremail@example.com" required>
+
         <br>
         <button type="submit">Submit</button>
     </form>
@@ -125,6 +127,7 @@
     .then((response) => response.json())
     .then((data) => {
 
+        // output to email box after submition 
         form.style.display = "none";
     })
     .catch((error) => {
@@ -132,6 +135,7 @@
     });
     });
 </script>
+    </div>
 </div>
 
 

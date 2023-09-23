@@ -51,6 +51,7 @@
     <form id="email_form">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="youremail@example.com" required>
+
         <br>
         <button type="submit">Submit</button>
     </form>
@@ -83,6 +84,7 @@
     .then((response) => response.json())
     .then((data) => {
 
+        // output to email box after submition 
         form.style.display = "none";
     })
     .catch((error) => {
