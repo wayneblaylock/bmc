@@ -8,6 +8,7 @@
     --grey: #4B4B4B;
   }
 
+  
 h1 {
     text-align: center;
     color: var(--blue);
@@ -15,23 +16,12 @@ h1 {
     font-size: 50px;
 }
 
-.post_container{
-    background-color: var(--lightbrown);
-    margin: 30px 10vw;
+.inline{
     display: flex;
-    max-width: 750px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 25px 0 0 25px;
-    transition: .5s;
-}
-
-.post_container:nth-child(2){
-    background-color: var(--brown);
-}
-
-.post_container:hover{
-    box-shadow: rgba(0, 0, 0, 0.462) 10px 10px 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 20px;
 }
 
 #links_box a{
@@ -39,6 +29,24 @@ h1 {
     color: black;
 }
 
+.post_container{
+    background-color: var(--lightbrown);
+    margin: 0 25px 30px;
+    display: flex;
+    width: 750px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 25px 0 0 25px;
+    transition: .5s;
+}
+
+.post_container:nth-child(even){
+    background-color: var(--brown);
+}
+
+.post_container:hover{
+    box-shadow: rgba(0, 0, 0, 0.462) 10px 10px 20px;
+}
 
 .post_image {
     height: 200px;
@@ -74,3 +82,110 @@ h1 {
     text-align: left;
     border-top: solid var(--blue) 3px;
 }
+
+.emailbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 350px;
+    margin: 0px 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--grey);
+    border-radius: 10px;
+}
+
+.emailbox h2 {
+    color: white;
+    margin-bottom: 0;
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+
+}
+
+.emailbox p {
+    color: white;
+    font-size: 24px;
+    margin: 10px 20px;
+    text-align: center;
+}
+
+.emailbox form{
+    text-align: center;
+}
+
+.emailbox input{
+    width: 250px;
+    padding: 8px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+}
+
+.emailbox button{
+    border: none;
+    font-family: 'Titillium Web' ,sans-serif;
+    background-color: var(--lightblue);
+    color: white;
+    padding: 8px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    transition: .8s;
+}
+
+.emailbox button:hover{
+    background-color: white;
+    color: var(--blue);
+}
+
+@media screen and (max-width: 1249px) {
+    body {
+
+        .inline{
+            margin: 0;
+        }
+
+        .emailbox{
+            width: 100vw;
+            margin: 0;
+            border-radius: 0;
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 830px) {
+
+    h1{
+        font-size: 45px;
+    }
+
+    #links_box{
+        width: 100vw;
+        /* margin: 20px; */
+    }
+
+    a.post_container{
+        width: 90vw;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        height: auto;
+    }
+
+    a.post_container img{
+        display: none;
+    }
+
+    .post_descriptor{
+        width: 100%;
+    }
+
+  }

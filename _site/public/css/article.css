@@ -90,7 +90,6 @@ body {
 #content {
     background-color: white;
     padding: 0 20vw;
-    min-height: 70vh;
 }
 
 #content #thesis {
@@ -134,9 +133,6 @@ body {
 }
 
 #content #back_button:hover{
-/*    background-color: white;
-    color: var(--blue);
-    box-shadow: rgba(0, 0, 0, 0.425) 0 3px 10px;*/
     margin-left: 0px;
     padding-left: 15px;
     padding-right: 30px;
@@ -150,6 +146,56 @@ body {
     background-color: var(--grey);
     margin-top: 30px;
     padding: 20px;
+    color: white;
+}
+
+#support_info h2{
+font-family: "Barlow", sans-serif;
+font-size: 30px;
+margin-bottom: 15px;
+}
+
+#support_info p{
+    font-size: 20px;
+}
+
+#support_info .inline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: 0 30px;
+}
+
+#support_info form{
+    text-align: center;
+}
+
+#support_info input{
+    width: 350px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
+    border: none;
+}
+
+#support_info button{
+    border: none;
+    font-family: 'Titillium Web' ,sans-serif;
+    background-color: var(--lightblue);
+    color: white;
+    padding: 8px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    margin-top: 10px;
+    transition: .8s;
+}
+
+#support_info button:hover{
+    background-color: white;
+    color: var(--blue);
 }
 
 #support_info #p {
@@ -158,36 +204,34 @@ body {
 }
 
 #support_info #shop_box {
-    width: 25vw;
-    text-align: center;
-    flex-direction: column;
-    background-color: #C4A484;
-    border-radius: 20px;
-    margin: 0 2vw;
-    transition: .5s;
+    width: 400px;
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 #support_info #shop_box img {
-    width: 25vw;
-    border-radius: 20px 20px 0 0;
+    width: 300px;
+    border-radius: 25px 0 25px 0;
 }
 
-#support_info #shop_box p {
-    padding: 0 0 10px 0;
-    margin: 0;
-}
-
-#support_info a {
-    transition: .5s;
+#support_info #shop_box a {
+    background-color: var(--lightblue);
+    color: white;
+    border: none;
+    text-decoration: none;
+    margin: 0 0 0 20px;
+    padding: 8px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: .8s;
 }
 
 #support_info #shop_box a:hover {
-    color: white;
-    transition: .5s;    
-}
-#support_info #shop_box:hover {
-    background-color: var(--blue);
-    transition: .5s;
+    background-color: white;
+    color: var(--blue);
 }
 
 
@@ -200,5 +244,86 @@ body {
     #title_banner #large {
         display: none;
     }
+
+    #title_banner #titles {
+        height: 75vw;
+        text-align: center;
+    }
+
+    #title_banner .title{
+        font-size: 9vw;
+    }
+
+    #title_banner .subtitle{
+        font-size: 8vw;
+    }
     
+    #content{
+        padding: 0;
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #content h2{
+        font-size: 30px;
+    }
+
+    #content p{
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 500px) {
+        
+        #header img{
+            height: 50px;
+            width: auto;
+        }
+
+        #header #right{
+            margin-right: 10px;
+        }
+
+        #header a.navLinks{
+            font-size: 15px;
+            padding: 5px 10px;
+            margin: 0 5px;
+        }
+        
+        #support_info h2{
+            margin: 20px;
+            text-align: center;
+        }
+
+        #support_info p{
+            margin: 0 10px 20px;
+            text-align: center;
+        }
+        
+        #support_info .inline{
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #support_info form{
+            width: 300px;
+        }
+        #support_info input{
+            width: 280px;
+            margin: 0;
+            padding: 10px 3px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        #shop_box{
+            width: 300px;
+        }
+
+    }   
+    @media screen and (max-width: 959px) {
+        #shop_box{
+            border-top: solid var(--blue) 3px;
+        }
+    }
   }
