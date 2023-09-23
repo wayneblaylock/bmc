@@ -3,4 +3,8 @@ module.exports = function(eleventyConfig) {
   return {
     passthroughFileCopy: true
   }
+  eleventyConfig.addPassthroughCopy('bmc.ico')
+  return {
+    passthroughFileCopy: true
+  }
 }
