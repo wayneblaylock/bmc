@@ -5,6 +5,7 @@ const fs = require('fs');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 const emailAuth = require('./email_auth.json')
+const readline = require('readline');
 
 
 
@@ -88,13 +89,33 @@ app.delete('/submit', (req,res) => {
   const formData = req.body;
 
   // Process the form data save to csv
-  console.log("submited")
-  let user = formData.email + '\n'
+  console.log("Removed")
+  let user = formData.email
+  let filePath = "./emails.csv"
 
-  fs.appendFile('emails.csv', user, function (err) {
-    if (err) throw err;
-    console.log('removed!');
+  const readStream = readline.createInterface({
+    input: fs.createReadStream(filePath),
+    output: process.stdout,
+    terminal: false,
   });
+
+  var tempFile = ""
+
+  readStream.on('line', (line) => {
+    // Compare each line to email
+    if (line !== user) {
+      tempFile += (line + '\n');
+    }
+  });
+
+  // When the readStream ends, close the writeStream
+  readStream.on('close', () => {
+    fs.writeFile(filePath, tempFile, function (err) {
+      if (err) throw err;
+      console.log('Replaced!');
+    });
+
+});
 
     //respond to web
     res.status(200).json({ message: 'Form submitted successfully' });

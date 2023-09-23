@@ -20,13 +20,13 @@ layout: layout.html
 
     // Get the form data
     const formData = {
-        email: document.getElementById("email").value 
+        email: document.getElementById("email").value.toLowerCase()
     }
 
 
     // Send the form data to the server using fetch
     fetch('http://localhost:3000/submit', {
-        method: 'POST',
+        method: 'DELETE',
         body: JSON.stringify(formData), 
         headers: {
             'Content-Type': 'application/json',
