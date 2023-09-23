@@ -41,12 +41,12 @@ fs.readFile(filePath, 'utf8', (err, data) => {
     return;
   }
 
-  // The content of the HTML file is stored in the 'data' variable
+  // The content of the HTML file is stored in the htmlcontent variable
   htmlContent = data;
 });
 
 
-// Handle form submission
+// Handle add user to email list form submission
 app.post('/submit', (req, res) => {
   const formData = req.body;
 
@@ -80,6 +80,33 @@ app.post('/submit', (req, res) => {
   //respond to web
   res.status(200).json({ message: 'Form submitted successfully' });
 });
+
+
+
+//handle remove user from email list form submitions
+app.delete('/submit', (req,res) => {
+  const formData = req.body;
+
+  // Process the form data save to csv
+  console.log("submited")
+  let user = formData.email + '\n'
+
+  fs.appendFile('emails.csv', user, function (err) {
+    if (err) throw err;
+    console.log('removed!');
+  });
+
+    //respond to web
+    res.status(200).json({ message: 'Form submitted successfully' });
+
+});
+
+
+
+
+
+
+
 
 // Start the server
 app.listen(3000, () => {

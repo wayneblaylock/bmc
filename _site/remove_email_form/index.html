@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/header.css">
+    <link rel="stylesheet" href="/public/css/postLinks.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>  
+        <div id="banner">
+            <div id="flex_container">
+                <div id="box1">
+                    <img src="/public/img/logo.png" id="logo" alt="Blue Man Cards">
+                    <p id="slogan">A Voice For Masculinity</p>
+                </div>
+                <div id="box2">
+                    <a href="/index.html" id="blog_bttn">Our Blog</a>
+                    <a href="/about/index.html" id="about_bttn">About Us</a>
+                    <a href="https://bluemancards.etsy.com/listing/1488094245" target="_blank">The Shop</a>
+                </div>
+            </div>
+            <img src="/public/img/mountains.jpg" id="background" class="norm" alt="Background image showing a mountainous landscape.">
+            <img src="/public/img/mountains2.jpg" id="background" class="small" alt="Background image showing a mountainous landscape.">
+        </div>
+    </header>
+
+    <main>
+        <h1>Email List Removel Request Form</h1>
+
+<div id="formContainer">
+    <form id="email_form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById('email_form');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+    // Get the form data
+    const formData = {
+        email: document.getElementById("email").value 
+    }
+
+
+    // Send the form data to the server using fetch
+    fetch('http://localhost:3000/submit', {
+        method: 'POST',
+        body: JSON.stringify(formData), 
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Origin': 'http://localhost:8080'
+        }
+    })
+
+    // Handle the response from the server
+    .then((response) => response.json())
+    .then((data) => {
+
+        form.style.display = "none";
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+    });
+</script>
+    </main>
+    <style>
+    #footer {
+        padding: 2vh 0vh;
+        background-color: var(--blue);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer a {
+        color: #f5eded;
+        margin: 10px;
+    }
+
+    #socials {
+        padding-top: .5rem;
+
+    }
+
+    #socials a {
+        margin: 1rem 2.5rem;
+    }
+
+    #footer #links {
+        padding-top: 1rem;
+    }
+
+    #links span {
+        margin: 2.5rem;
+    }
+
+    #links #pages {
+        margin-top: 1rem;
+    }
+
+    #pages a {
+        text-decoration: none;
+    }
+
+    #pages span {
+        padding: 0;
+        margin: 0;
+        color: #f5eded;
+        margin-bottom: .5em;
+
+    }
+
+    #footer #fine_text {
+        font-size: 12px;
+        padding-bottom: .5;
+    }
+
+    .op-3 {
+        opacity: .3;
+    }
+
+</style>
+
+<div id="footer">
+    <div id="links">
+        <span id="socials">
+            <a href=""><i class="fa-brands fa-instagram fa-2x" style="color: #f5eded;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-2x" style="color: #f5eded;" ></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter fa-2x" style="color: #f5eded;"></i></a>
+        </span>
+        <div id="pages">
+            <a href="">Blog</a><span class="dot op-3">&middot</span>
+            <a href="">Store</a><span class="dot op-3">&middot</span>
+            <a href="">About</a><span class="dot op-3">&middot</span>
+            <a href="">Contact</a><span class="dot op-3">
+        </div>
+    </div>
+    <div id="fine_text">
+        <a href="https://www.privacypolicygenerator.info/live.php?token=VpmuLnttQ2225PS5vsQm8Az3uXaUv6ZL" target="_blank">Privacy&nbsp;Policy</a>
+        <a href="https://www.termsofservicegenerator.net/live.php?token=P73EH1psirTeVzVV2cwvjpQ4ru3ZDSqO" target="_blank">Terms&nbsp;of&nbsp;Service</a><br>
+        <a href="" class="op-3">&#169; Blue&nbsp;Man&nbsp;Cards&nbsp;2023</a>
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/1bee7b2c1d.js" crossorigin="anonymous"></script>
+</body>
+</html> 
