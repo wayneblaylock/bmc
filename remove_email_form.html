@@ -1,3 +1,8 @@
+---
+layout: layout.html
+---
+<h1>Email List Removel Request Form</h1>
+
 <div id="formContainer">
     <form id="email_form">
         <label for="email">Email:</label>
@@ -21,7 +26,7 @@
 
     // Send the form data to the server using fetch
     fetch('http://localhost:3000/submit', {
-        method: 'POST',
+        method: 'DELETE',
         body: JSON.stringify(formData), 
         headers: {
             'Content-Type': 'application/json',
@@ -34,7 +39,6 @@
     .then((response) => response.json())
     .then((data) => {
 
-        // output to email box after submition 
         form.style.display = "none";
     })
     .catch((error) => {
