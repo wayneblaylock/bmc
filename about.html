@@ -1,6 +1,222 @@
 ---
 layout: layout.html
 ---
-<style>#about_bttn{display: none;}</style>
+<style>
+#about_bttn{display: none;}
 
-<h1>About Blue Man Cards</h1>
+#content h2{
+    color: var(--blue);
+    font-family: 'Barlow', sans-serif;
+    font-size: 35px;
+}
+
+#content{
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Titillium Web' ,sans-serif;
+    font-size: 20px;
+}
+
+</style>
+
+<div id="content">
+    <h1>About Blue Man Cards</h1>
+    <p>
+    Life can be really hard. Particularly when you're burdened by the sense that every step you take is met with criticism. When any effort you make feels completely inadequate. Unfortunately, these are common feelings when living in a world that loves to criticize.
+</p>
+<p>
+    Many focus especially on the flaws of men and masculinity. Hence: Blue Man Cards. We hope to remind the world that there are still good men, while pursuing our mission: <strong>“To inspire and enable men to become their best selves.”</strong> The evolution of this brand has been tremendous considering its beginning as a simple idea.
+</p>
+
+<h2>The Man Card</h2>
+<p>
+    It was the beginning of my sophomore year of high school while I was working at a warehouse with a friend. We came up with an idea of making work more interesting by creating some Man Cards. I printed two out on cardstock and laminated them with packaging tape. We would bet our Man Card over competitions with each other.
+</p>
+<p>
+    The following summer, I took a coding class with a different friend (now the BMC co-founder). This is where the idea of a Man Card grew. We pieced together a janky website with the idea of selling Man Cards and creating a larger-scale trading game.
+</p>
+
+<p>
+    The website idea died off when we realized we were not actually capable of developing that, but I experimented with some different Man Card designs and sold them to friends and even in a few local stores.
+</p>
+
+<h2>The Brand</h2>
+<p>
+    Years later, we started talking about it again, but with a different angle in mind. We didn't just want to sell cards; we wanted to build a brand with a purpose. Something that could really benefit men. We realized the Man Card could be more than just a novelty item; it could be a symbol of positive masculinity and a commitment to personal growth.
+</p>
+<p>
+    This time around, we were better equipped to build a website. More importantly, we were able to define our mission and work toward it. We do this by researching different topics that pertain to masculinity and writing about it. You can find articles on our blog and content on our social media. And, of course, we still sell Man Cards, both online and in retail stores.
+</p>
+<p>
+    If you would like to support our brand and our mission, you can:
+</p>
+<ul>
+    <li><strong>Check out our content:</strong> If you like it, share it.</li>
+    <li><strong>Get a Man Card:</strong> They make great gifts!</li>
+    <li><strong>Give us feedback or suggest topics:</strong> Visit our contact page to connect with us and be a part of the conversation.</li>
+</ul>
+
+</div>
+<div id="support_info">
+    <div class="inline">
+        <h2>Hear About New Articles</h2>
+        {% include "email-sign-up.html" %}
+        <p>You won't get more than 2 emails a month</p>
+    </div>
+    <div id="shop_box">
+        <h2>Get Your Own Man Card</h2>
+        <img src="/public/img/4_cropped_for_thumbnail.png" alt="A picture of a Man Card from our Shop.">
+        <p>Great for Gifts</p>
+        <a href="https://bluemancards.etsy.com/listing/1488094245" target="_blank">Shop BlueManCards</a>
+    </div>
+</div>
+
+<style>
+    #support_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey);
+    margin-top: 30px;
+    padding: 20px;
+    color: white;
+}
+
+#support_info h2{
+font-family: "Barlow", sans-serif;
+font-size: 30px;
+margin-bottom: 15px;
+}
+
+#support_info p{
+    font-size: 20px;
+}
+
+#support_info .inline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: 0 30px;
+}
+
+#support_info form{
+    text-align: center;
+}
+
+#support_info input{
+    width: 350px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
+    border: none;
+}
+
+#support_info button{
+    border: none;
+    font-family: 'Titillium Web' ,sans-serif;
+    background-color: var(--lightblue);
+    color: white;
+    padding: 8px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    margin-top: 10px;
+    transition: .8s;
+}
+
+#support_info button:hover{
+    background-color: white;
+    color: var(--blue);
+}
+
+#support_info #p {
+    width: 25vw;
+    margin: 0;
+}
+
+#support_info #shop_box {
+    width: 400px;
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#support_info #shop_box img {
+    width: 300px;
+    border-radius: 25px 0 25px 0;
+}
+
+#support_info #shop_box a {
+    background-color: var(--lightblue);
+    color: white;
+    border: none;
+    text-decoration: none;
+    margin: 0 0 0 20px;
+    padding: 8px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: .8s;
+}
+
+#support_info #shop_box a:hover {
+    background-color: white;
+    color: var(--blue);
+}
+
+
+#support_info h2{
+            margin: 20px;
+            text-align: center;
+        }
+
+@media screen and (max-width: 500px) {
+
+    #content{
+    width: 80vw;
+    font-size: 16px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+
+        #support_info p{
+            margin: 0 10px 20px;
+            text-align: center;
+        }
+        
+        #support_info .inline{
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #support_info form{
+            width: 300px;
+        }
+        #support_info input{
+            width: 280px;
+            margin: 0;
+            padding: 10px 3px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        #shop_box{
+            width: 300px;
+        }
+
+    }   
+    @media screen and (max-width: 959px) {
+        #shop_box{
+            border-top: solid var(--blue) 3px;
+        }
+    }
+
+</style>
