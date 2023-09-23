@@ -5,14 +5,16 @@ layout: layout.html
 <h1>All Articles</h1>
 
 <div class="inline">
-    <div id="flexbox">
+    <div id="content_flexbox">
         <div id="links_box">
             {% for post in collections.post %}
             <a href="{{ post.url }}" class="post_container">
                     <div class="post_descriptor">
+                        <div class="head_descriptor">
                         <h2 class="title">{{ post.data.title }}</h2>
                         <h2 class="subtitle">{{post.data.subtitle}}</h2>
                         <h3 class="date">{{post.data.kid }}</h3>
+                        </div>
                         <p>{{ post.data.thesis }}</p>
                     </div>   
                     <img src="{{ post.data.imgM }}" class="post_image" alt="{{post.data.imgAlt}}"> 
