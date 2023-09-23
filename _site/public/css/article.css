@@ -133,9 +133,6 @@ body {
 }
 
 #content #back_button:hover{
-/*    background-color: white;
-    color: var(--blue);
-    box-shadow: rgba(0, 0, 0, 0.425) 0 3px 10px;*/
     margin-left: 0px;
     padding-left: 15px;
     padding-right: 30px;
@@ -247,5 +244,86 @@ margin-bottom: 15px;
     #title_banner #large {
         display: none;
     }
+
+    #title_banner #titles {
+        height: 75vw;
+        text-align: center;
+    }
+
+    #title_banner .title{
+        font-size: 9vw;
+    }
+
+    #title_banner .subtitle{
+        font-size: 8vw;
+    }
     
+    #content{
+        padding: 0;
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #content h2{
+        font-size: 30px;
+    }
+
+    #content p{
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 500px) {
+        
+        #header img{
+            height: 50px;
+            width: auto;
+        }
+
+        #header #right{
+            margin-right: 10px;
+        }
+
+        #header a.navLinks{
+            font-size: 15px;
+            padding: 5px 10px;
+            margin: 0 5px;
+        }
+        
+        #support_info h2{
+            margin: 20px;
+            text-align: center;
+        }
+
+        #support_info p{
+            margin: 0 10px 20px;
+            text-align: center;
+        }
+        
+        #support_info .inline{
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #support_info form{
+            width: 300px;
+        }
+        #support_info input{
+            width: 280px;
+            margin: 0;
+            padding: 10px 3px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        #shop_box{
+            width: 300px;
+        }
+
+    }   
+    @media screen and (max-width: 959px) {
+        #shop_box{
+            border-top: solid var(--blue) 3px;
+        }
+    }
   }
