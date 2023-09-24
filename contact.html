@@ -20,7 +20,7 @@ layout: layout.html
 
     h1 {
         text-align: center;
-        color: #333;
+        color: var(--blue);
     }
 
     form {
@@ -53,17 +53,43 @@ layout: layout.html
     }
 
     input[type="submit"] {
-        background-color: #007bff;
+        background-color: var(--lightblue);
         color: #fff;
         border: none;
         padding: 10px 20px;
-        border-radius: 3px;
+        border-radius: 20px;
         cursor: pointer;
+        transition: .4s;
     }
 
     input[type="submit"]:hover {
-        background-color: #0056b3;
+        background-color: white;
+        color: var(--blue);
+        border: solid 1px var(--blue);
     }
+
+    @media screen and (max-width: 650px) {
+        #container{
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        width: 87vw;
+        padding: 10px;
+        margin-bottom:15px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    }
+
 </style>
 
 
