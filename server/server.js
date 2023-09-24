@@ -126,6 +126,36 @@ app.delete('/submit', (req,res) => {
 
 
 
+//handle contact form 
+app.post('/contactForm', (req,res) => {
+  const formData = req.body;
+
+  //Send Confirmation Email
+  var mailOptions = {
+    from: 'noreply@bluemancards.com',
+    to: "hunter.scott848@gmail.com",
+    subject: 'Contact form',
+    html: `<h1>${formData.name}</h1><h1>${formData.email}</h1><h1>${formData.reason}</h1><p>${formData.message}</p>`
+  };
+  
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+
+
+    //respond to web
+    res.status(200).json({ message: 'Form submitted successfully' });
+
+});
+
+
+
+
+
 
 
 
