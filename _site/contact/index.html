@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&display=swap" rel="stylesheet">
     <link rel="icon" href="/bmc.ico" type="image/x-icon">
-    <title>Blue Man Cards</title>
+    <title>Document</title>
 </head>
 <body>
     <header>  
@@ -31,32 +31,115 @@
     </header>
 
     <main>
-        <h1>Email List Removel Request Form</h1>
+        <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
 
-<div id="formContainer">
-    <form id="email_form">
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    select {
+        height: 40px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+
+<div class="container">
+    <h1>Contact Us</h1>
+    <form id="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
-        <br>
-        <button type="submit">Submit</button>
+
+        <label for="reason">Reason for Contact:</label>
+        <select id="reason" name="reason">
+            <option value="general">General Inquiry</option>
+            <option value="support">Technical Support</option>
+            <option value="billing">Billing Question</option>
+            <option value="feedback">Feedback</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="submit" value="Submit">
     </form>
 </div>
 
+
 <script>
-    const form = document.getElementById('email_form');
+    const form = document.getElementById('form');
 
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the form from submitting
 
     // Get the form data
     const formData = {
-        email: document.getElementById("email").value.toLowerCase()
+        name : document.getElementById("name").value,
+        email: document.getElementById("email").value.toLowerCase(),
+        reason: document.getElementById("reason").value,
+        message: document.getElementById("message").value
     }
 
 
     // Send the form data to the server using fetch
-    fetch('http://localhost:3000/submit', {
-        method: 'DELETE',
+    fetch('http://localhost:3000/contactForm', {
+        method: 'POST',
         body: JSON.stringify(formData), 
         headers: {
             'Content-Type': 'application/json',
@@ -142,22 +225,21 @@
 <div id="footer">
     <div id="links">
         <div id="socials">
-            <a href="https://www.instagram.com/bluemancards/" target="_blank"><i class="fa-brands fa-instagram fa-2x" style="color: #f5eded;"></i></a>
-            <a href="https://www.facebook.com/BlueManCards/" target="_blank"><i class="fa-brands fa-facebook fa-2x" style="color: #f5eded;" ></i></a>
-            <a href="https://www.pinterest.com/bluemancards/" target="_blank"><i class="fa-brands fa-pinterest fa-2x" style="color: #f5eded;"></i></a>
-            <a href="https://bluemancards.etsy.com" target="_blank"><i class="fa-brands fa-etsy fa-2x" style="color: #f5eded;"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-2x" style="color: #f5eded;"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-2x" style="color: #f5eded;" ></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter fa-2x" style="color: #f5eded;"></i></a>
         </div>
         <div id="pages">
-            <a href="\index.html">Blog</a><span class="dot op-3">&middot</span>
-            <a href="https://bluemancards.etsy.com" target="_blank">Store</a><span class="dot op-3">&middot</span>
-            <a href="\about\index.html">About</a><span class="dot op-3">&middot</span>
+            <a href="">Blog</a><span class="dot op-3">&middot</span>
+            <a href="">Store</a><span class="dot op-3">&middot</span>
+            <a href="">About</a><span class="dot op-3">&middot</span>
             <a href="./contact/index.html">Contact</a><span class="dot op-3">
         </div>
     </div>
     <div id="fine_text">
         <a href="https://www.privacypolicygenerator.info/live.php?token=VpmuLnttQ2225PS5vsQm8Az3uXaUv6ZL" target="_blank">Privacy&nbsp;Policy</a>
         <a href="https://www.termsofservicegenerator.net/live.php?token=P73EH1psirTeVzVV2cwvjpQ4ru3ZDSqO" target="_blank">Terms&nbsp;of&nbsp;Service</a><br>
-        <a href="\index.html" class="op-3">&#169; Blue&nbsp;Man&nbsp;Cards&nbsp;2023</a>
+        <a href="" class="op-3">&#169; Blue&nbsp;Man&nbsp;Cards&nbsp;2023</a>
     </div>
 </div>
 
