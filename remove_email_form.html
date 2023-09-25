@@ -1,7 +1,71 @@
 ---
 layout: layout.html
 ---
-<h1>Email List Removel Request Form</h1>
+
+<style>
+
+h1{
+    margin: 30px;
+}
+
+#formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#email_form{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    margin: 40px 0;
+    font-family: 'Titillium Web' ,sans-serif;
+    text-align: center;
+}
+
+label{
+    font-size: 25px;
+    margin: 10px;
+}
+
+input{
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid grey 1px;
+    width: 400px;
+}
+
+button{
+    background-color: var(--lightblue);
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    margin: 10px;
+    transition: .4s;
+}
+
+button:hover{
+    padding: 10px 25px;
+}
+
+@media screen and (max-width: 600px){
+    
+    h1{
+        font-size: 35px;
+    }
+    
+    input{
+        width: 80vw;
+    }
+}
+
+</style>
+
+<h1>Email List Removal Request Form</h1>
 
 <div id="formContainer">
     <form id="email_form">
