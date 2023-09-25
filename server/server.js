@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 //set the origin of were the data can come from
 app.use(cors({
-  origin: 'http://localhost:8080'
+  origin: 'https://bluemancards.com'
 }));
 
 

@@ -55,13 +55,13 @@
 
 
     // Send the form data to the server using fetch
-    fetch('http://localhost:3000/submit', {
+    fetch('https://node.bluemancards.com/submit', {
         method: 'DELETE',
         body: JSON.stringify(formData), 
         headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
-            'Origin': 'http://localhost:8080'
+            'Origin': 'https://bluemancards.com'
         }
     })
 
